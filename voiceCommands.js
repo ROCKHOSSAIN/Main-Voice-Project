@@ -16,10 +16,17 @@
     function handleVoiceCommand(command) {
       if (command.includes('home')) {
         scrollToSection('home');
-      } else if (command.includes('textToImage')) {
-        scrollToSection('textToImage'); // Make sure the section ID is exactly as specified in your HTML
-      } else if (command.includes('price')) {
+      } else if (command.includes('image')) {
+        scrollToSection('image'); // Make sure the section ID is exactly as specified in your HTML
+      } else if (command.includes('creative')) {
+        scrollToSection('creative'); // Make sure the section ID is exactly as specified in your HTML
+      } 
+      else if (command.includes('price')) {
         scrollToSection('price'); // Make sure the section ID is exactly as specified in your HTML
+      }else if(command.includes('update')){
+        scrollToSection('update');
+      }else if(command.includes('contact')){
+        scrollToSection('contact')
       }
     }
     
