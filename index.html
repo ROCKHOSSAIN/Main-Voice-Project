@@ -48,7 +48,7 @@
  
 </head>
 <body>
-    <header class="bg-header ">
+    <header id="home" class="bg-header ">
         <section class="container mx-auto py-6 ">
             <div class="navbar text-white">
                 <div class="navbar-start">
@@ -57,37 +57,28 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black lg:text-white rounded-box w-52 text-base">
-                      <li><a class="bg-red">Home</a></li>
-                      <li><a>Use Cases</a></li>
-                      <li>
-                        <a>Pages</a>
-                        <ul class="p-2">
-                          <li><a>Bloging</a></li>
-                          <li><a>Pricing</a></li>
-                        </ul>
-                      </li>
-                     
-                      <li><a>Contact</a></li>
+                      <li><a href="#home" class="text-white">Home</a></li>
+                      <li><a href="#useCase" class="text-white">Use Cases</a></li>
+                      <li><a href="#textToImage" class="text-white">Text-to-image</a></li>
+                      <li><a href="#textToDetails" class="text-white">Text-to-details</a></li>
+                      <li><a href="#price" class="text-white">Pricing</a></li>
+                      <li><a href="#update" class="text-white">Updates</a></li>
+                      <li><a href="#contact" class="text-white">Contact</a></li>
                     </ul>
                   </div>
                     <img class="w-16" src="images/logo.png" alt="">
-                  <a class="normal-case text-xl text-base space font-medium">OPENUP</a>
+                  <a class="normal-case text-xl space font-medium">OPENUP</a>
     
                 </div>
                 <div class="navbar-center hidden lg:flex text-base">
                   <ul class="menu menu-horizontal px-1">
-                      <li><a class="text-lg sans hover:bg-gray-400 font-medium">Home</a></li>
-                      <li><a class="text-lg sans hover:bg-gray-400 font-medium">Use Cases</a></li>
-                    <li tabindex="0">
-                      <details>
-                        <summary class="text-lg sans  hover:bg-gray-400 font-medium">Pages</summary>
-                        <ul class="p-2 bg-red-400 ">
-                            <li ><a>Bloging</a></li>
-                            <li ><a>Pricing</a></li>
-                        </ul>
-                      </details>
-                    </li>
-                      <li ><a class="text-lg sans hover:bg-gray-400 font-medium">Contact</a></li>
+                      <li><a href="#home" class="text-lg sans hover:bg-gray-400 font-medium">Home</a></li>
+                      <li><a href="#useCase" class="text-lg sans hover:bg-gray-400 font-medium">Use Cases</a></li>
+                      <li><a href="#textToImage" class="text-lg sans hover:bg-gray-400 font-medium">Text-to-image</a></li>
+                      <li><a href="#textToDetails" class="text-lg sans hover:bg-gray-400 font-medium">Text-to-details</a></li>
+                      <li><a href="#price" class="text-lg sans hover:bg-gray-400 font-medium">Pricing</a></li>
+                      <li><a href="#update" class="text-lg sans hover:bg-gray-400 font-medium">Updates</a></li>
+                      <li ><a href="#contact"class="text-lg sans ext-white hover:bg-gray-400 font-medium">Contact</a></li>
                   </ul>
                 </div>
                 <div class="navbar-end flex gap-5">
@@ -95,7 +86,7 @@
                   <div>
                     <a class="btn btn-primary hidden lg:block px-3 py-4  sans font-medium">Get Started</a>
                   </div>
-                  <button>
+                  <button id="startListeningButton">
                     <div class="btn-primary p-3 rounded-md">
                         <i class="fa-solid fa-microphone-lines text-white text-base "></i> Voice
                     </div>
@@ -195,7 +186,7 @@
             
         </section>
 <!-- voice to text and image generator  -->
-        <section class="bg-[#0C1221]">
+        <section id="textToImage" class="bg-[#0C1221]">
             <div class="container mx-auto py-20 ">
                 <div class="flex lg:flex-row-reverse shadow-2xl bg-[#0E1424] justify-center items-center px-10">
                     <div class="h-full w-full hidden md:block lg:block">
@@ -219,7 +210,7 @@
                 </h1>
                    <p class="mt-5 font-normal">The first step in generating AI images is collecting a dataset of <br>
                     real images related to the desired output. For instance.</p>
-                    <div class="flex flex-col  lg:flex-row items-center justify-center gap-8 mt-5">
+                    <div class="flex lg:flex-row items-center justify-center gap-4 md:gap-5 lg:gap-8 mt-5">
                         <button class="btn-primary text-white p-1 lg:p-2 rounded-md hover:btn-primary text-xs  lg:text-xl">
                             Creative
                            </button>
@@ -254,7 +245,7 @@
         </section>
 
     <!-- pricing information  -->
-      <section class=" bg-[#0C1221]">
+      <section id="price" class=" bg-[#0C1221]">
           <div class="text-center text-white py-10">
               <h1 class="text-2xl md:text-4xl lg:text-6xl font-semibold leading-normal">Including Pricing Information <br>
                   For Specific AI Services
@@ -322,7 +313,7 @@
       </section>
 
     <!-- latest update section  -->
-    <section class=" bg-[#0C1221] py-20">
+    <section id="update" class=" bg-[#0C1221] py-20">
           <h1 class="text-center text-3xl md:text-4xl lg:text-6xl text-white ">Latest updates  </h1>
           <p class="text-center text-base  mt-4 text-white">Since 2002, we have been transforming the way
             customers contact brands online.</p>
@@ -382,7 +373,7 @@
 
     </main>
 <!-- //footer section -->
-    <footer class=" bg-[#0C1221] py-5">
+    <footer id="contact" class=" bg-[#0C1221] py-5">
       <footer class=" container mx-auto footer p-10 text-base-content ">
         <div class="text-white">
           <span class="footer-title">Services</span> 
@@ -426,6 +417,6 @@
       
 
     </footer>
-    
+    <script src="voiceCommands.js"></script>
 </body>
 </html>
