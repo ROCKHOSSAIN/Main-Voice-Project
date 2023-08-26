@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice-Recognition-Website</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
 <!-- font-awesome  -->
@@ -48,7 +48,7 @@
  
 </head>
 <body>
-    <header id="home" class="bg-header fixed w-full z-10">
+    <header class="bg-header fixed w-full z-10">
         <section class="container mx-auto py-4 ">
             <div class="navbar text-white">
                 <div class="navbar-start">
@@ -56,14 +56,14 @@
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black lg:text-white rounded-box w-52 text-base">
-                      <li><a href="#home" class="text-white  text-xs md:text-sm lg:text-lg">Home</a></li>
-                      <li><a href="#image" class="text-white  text-xs md:text-sm lg:text-lg">Text-to-image</a></li>
-                      <li><a href="#textToDetails" class="text-white  text-xs md:text-sm lg:text-lg">Text-to-details</a></li>
-                      <li><a href="#creative" class="text-white  text-xs md:text-sm lg:text-lg">Creativity</a></li>
-                      <li><a href="#price" class="text-white text-xs md:text-sm lg:text-lg" >Pricing</a></li>
-                      <li><a href="#update" class="text-white  text-xs md:text-sm lg:text-lg">Updates</a></li>
-                      <li><a href="#contact" class="text-white  text-xs md:text-sm lg:text-lg">Contact</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black lg:text-white rounded-box w-52 text-base ">
+                      <li><a href="#home"         class="text-white  text-xs md:text-sm lg:text-lg pr-0">Home</a></li>
+                      <li><a href="#image"        class="text-white  text-xs md:text-sm lg:text-lg pr-0">Text-to-image</a></li>
+                      <li><a href="#textToDetails"class="  text-white  text-xs md:text-sm lg:text-lg pr-0">Text-to-details</a></li>
+                          <li><a href="#creative" class="text-white  text-xs md:text-sm lg:text-lg pr-0">Creativity</a></li>
+                          <li><a href="#price"    class="text-white text-xs  md:text-sm lg:text-lg pr-0" >Pricing</a></li>
+                          <li><a href="#update"   class="text-white  text-xs md:text-sm lg:text-lg pr-0">Updates</a></li>
+                          <li><a href="#contact"  class="text-white  text-xs md:text-sm lg:text-lg pr-0">Contact</a></li>
                     </ul>
                   </div>
                     <img class=" w-16" src="images/logo.png" alt="">
@@ -72,23 +72,23 @@
                 </div>
                 <div class="navbar-center hidden lg:flex text-base">
                   <ul class="menu menu-horizontal px-1">
-                      <li><a href="#home" class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium">Home</a></li>
-                      <li><a href="#image" class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium">Text-to-image</a></li>
-                      <li><a href="#details" class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium">Text-to-details</a></li>
-                      <li><a href="#creative" class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium">Creativity</a></li>
-                      <li><a href="#price" class="text-xs md:text-sm lg:text-lg hover:bg-gray-400 font-medium">Pricing</a></li>
-                      <li><a href="#update" class="text-xs md:text-sm lg:text-lg hover:bg-gray-400 font-medium">Updates</a></li>
-                      <li ><a href="#contact"class="text-xs md:texy-sm lg:text-lg  hover:bg-gray-400 font-medium ">Contact</a></li>
+                      <li><a href="#home"      class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium  md:pr-3">Home</a></li>
+                      <li><a href="#image"     class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium  md:pr-3">Text-to-image</a></li>
+                      <li><a href="#details"   class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium  md:pr-3">Text-to-details</a></li>
+                      <li><a href="#creative"  class="text-xs md:text-sm lg:text-lg  hover:bg-gray-400 font-medium  md:pr-3">Creativity</a></li>
+                      <li><a href="#price"     class="text-xs md:text-sm lg:text-lg hover:bg-gray-400 font-medium  md:pr-3">Pricing</a></li>
+                      <li><a href="#update"    class="text-xs md:text-sm lg:text-lg hover:bg-gray-400 font-medium  md:pr-3">Updates</a></li>
+                      <li ><a href="#contact"  class="text-xs md:texy-sm lg:text-lg  hover:bg-gray-400 font-medium   md:pr-3">Contact</a></li>
                   </ul>
                 </div>
                 <div class="navbar-end flex gap-5">
                   <a class="hidden lg:block text-lg sans font-medium">Sign in</a>
                   <div>
-                    <a class="btn btn-primary hidden lg:block px-3 py-4  sans font-medium">Get Started</a>
+                    <a class="btn btn-primary hidden lg:block px-2 lg:px-3 py-2 lg:py-4  sans font-medium">Get Started</a>
                   </div>
                   <button id="startListeningButton">
                     <div class="btn-primary p-3 rounded-md">
-                        <i class="fa-solid fa-microphone-lines text-white text-base "></i> Voice
+                        <i class="fa-solid fa-microphone-lines text-white text-lg "></i> Voice
                     </div>
                    
                   </button>
@@ -102,7 +102,7 @@
     <main>
  
         <!-- popular tags  -->
-        <section class=" bg-header">
+        <section id="home" class="responsive bg-header">
             <section class="container mx-auto">
                 <div class="text-center text-white py-10">
                     <h1 class="text-6xl space font-semibold leading-normal">The Fusion of Art and <br>
@@ -141,12 +141,22 @@
         <!-- artificial images  -->
         <section class="bg-header py-10 ">
             
-            <div class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-4 gap-10 items-center justify-center container mx-auto">
+            <div class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-4 gap-2 md:gap-5 lg:gap-10 items-center justify-center container mx-auto">
                
-                <img class="rounded-xl lg:rounded-2xl px-4 lg:px-0 " src="images/100.jpg" alt="">              
+                <img class="rounded-xl lg:rounded-2xl px-4 lg:px-0 " src="images/100.jpg" alt="">  
+              
+
+              
                 <img class="rounded-xl lg:rounded-2xl px-4 lg:px-0 " src="images/101.jpg" alt="">
+                
+
                 <img class="rounded-xl lg:rounded-2xl px-4 lg:px-0 " src="images/13.jpg" alt="">
+               
+               
+               
                 <img class="rounded-xl lg:rounded-2xl px-4 lg:px-0 " src="images/12.jpg" alt="">
+               
+                
             </div>
         </section>
 
