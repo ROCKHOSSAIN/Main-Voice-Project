@@ -28,6 +28,12 @@
       }else if(command.includes('contact')){
         scrollToSection('contact')
       }
+      else {
+        // Provide voice feedback for unrecognized commands
+        const synth = window.speechSynthesis;
+        const voiceError = new SpeechSynthesisUtterance("Your voice command is not recognized.");
+        synth.speak(voiceError);
+      }
     }
     
     function scrollToSection(sectionId) {
