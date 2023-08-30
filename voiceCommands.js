@@ -27,6 +27,8 @@
         scrollToSection('update');
       }else if(command.includes('contact')){
         scrollToSection('contact')
+      }else if(command.includes('details')){
+        scrollToSection('details')
       }
       else {
         // Provide voice feedback for unrecognized commands
@@ -74,3 +76,46 @@
       type(); // Start the typewriter effect
     });
 
+
+ // Function to handle voice recognition and generating response
+ function startVoiceRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+
+  recognition.onresult = async (event) => {
+      const transcript = event.results[0][0].transcript;
+      document.getElementById('inputField').value = transcript;
+      
+      // Generate response when voice input is captured
+      await generateResponse();
+  };
+
+  recognition.start();
+}
+
+// Function to generate response
+async function generateResponse() {
+  const apiKey = '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';
+  const prompt = document.getElementById('inputField').value;
+  
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: [
+              { role: 'system', content: 'You are a helpful assistant.' },
+              { role: 'user', content: prompt }
+          ]
+      })
+  });
+  
+  const responseData = await response.json();
+  const responseText = responseData.choices[0].message.content;
+  document.getElementById('outputArea').value = responseText;
+}

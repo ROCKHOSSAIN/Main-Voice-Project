@@ -59,7 +59,7 @@
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black lg:text-white rounded-box w-52 text-base ">
                       <li><a href="#home"         class="text-white  text-xs md:text-sm lg:text-lg pr-0">Home</a></li>
                       <li><a href="#image"        class="text-white  text-xs md:text-sm lg:text-lg pr-0">Text-to-image</a></li>
-                      <li><a href="#textToDetails"class="  text-white  text-xs md:text-sm lg:text-lg pr-0">Text-to-details</a></li>
+                      <li><a href="#details"class="  text-white  text-xs md:text-sm lg:text-lg pr-0">Text-to-details</a></li>
                           <li><a href="#creative" class="text-white  text-xs md:text-sm lg:text-lg pr-0">Creativity</a></li>
                           <li><a href="#price"    class="text-white text-xs  md:text-sm lg:text-lg pr-0" >Pricing</a></li>
                           <li><a href="#update"   class="text-white  text-xs md:text-sm lg:text-lg pr-0">Updates</a></li>
@@ -114,6 +114,7 @@
                         <button class="absolute right-0 lg:right-1/3">
                             <a class=" btn-primary px-2 lg:px-2  py-2 lg:py-3  sans mr-2">GENERATE</a>
                         </button>
+                        
                         
                        </div>
                         <div class="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-3 py-4 lg:py-6">
@@ -212,6 +213,25 @@
                 
               </div>
         </section>
+
+        <!-- text to details  -->
+        <section id="details" class="bg-[#141A31] py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4">
+            <div class="flex flex-col lg:flex-row items-center justify-center relative">
+                <div class="relative w-full max-w-sm">
+                    <input id="inputField" class="px-3 py-4 text-sm lg:text-xl w-full border-none" type="text" placeholder="Describe what you want to directly click!!">
+                    <!-- Modified button click event for voice recognition and generating response -->
+                    <button onclick="startVoiceRecognition()" class="absolute right-0 top-0 bottom-0">
+                        <a class="btn-primary px-2 lg:px-2 py-2 lg:py-3 sans mr-2"> <i class="fa-solid fa-microphone-lines text-white text-xs md:text-sm lg:text-base "></i> GENERATE</a>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center">
+                <textarea id="outputArea" class="bg-white text-black border-2 border-cyan-700 " cols="90" rows="10"></textarea>
+            </div>
+        </div>
+    </section>
 
        <!-- various image generator  -->
        <section id="creative" class=" bg-[#0C1221]">
